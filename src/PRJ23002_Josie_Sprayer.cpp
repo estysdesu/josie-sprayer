@@ -64,7 +64,7 @@ void loop() {
   } else if (dist < TARGET_RANGE) {
     digitalWrite(LED_BUILTIN, HIGH); // LED on
     digitalWrite(PIN3, LOW); // take the motor driver out of standby
-    stepper.step(STEPS*5); // rotate motor 5 times
+    stepper.step(-STEPS*5); // rotate motor 5 times
   } else {
     digitalWrite(LED_BUILTIN, LOW); // ensure LED off
     digitalWrite(PIN3, HIGH); // ensure motor driver in standby
